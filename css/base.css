@@ -1,0 +1,180 @@
+﻿@charset "utf-8";
+
+/* basic */
+body {
+	
+}
+a {
+	
+}
+a:hover {
+	
+}
+a:active {
+	
+}
+a:visited {
+	
+}
+
+/* Header */
+#hd {
+	
+}
+#ihd {
+	
+}
+#logo {
+	
+}
+#logo h1 {
+	
+}
+#logo h1 a {
+	
+}
+
+/* Nav Menu*/
+#nav {
+	
+}
+.menu {
+	
+}
+.menu ul {
+	
+}
+.menu li {
+	
+}
+.menu li a {
+	
+}
+.menu li a:hover {
+	
+}
+.menu-cur a {
+	
+}
+
+/* Banner */
+#bn {
+	
+}
+#ibn {
+	
+}
+.bn-title {
+	
+}
+.bn-text {
+	
+}
+.bn-des {
+	
+}
+.bn-btn {
+	
+}
+/* Content */
+#cnt {
+	
+}
+#icnt {
+	
+}
+.post {
+	
+}
+/* Post Entry */
+.entry h1 {
+	
+}
+.entry h2 {
+	
+}
+.entry h3 {
+	
+}
+.entry h4 {
+	
+}
+.entry h5 {
+	
+}
+.entry h6 {
+	
+}
+.entry p {
+	
+}
+.entry table {
+	
+}
+.entry th {
+	
+}
+.entry td {
+	
+}
+
+/* Sidebar */
+#sdb {
+	
+}
+.sdb-cnt {
+	
+}
+.sdb-cnt h3 {
+	
+}
+.sdb-menu {
+	
+}
+.sdb-menu h3 {
+	
+}
+
+/* Footer */
+#ft {
+
+}
+#ift {
+	
+}
+.info {
+	
+}
+.copyright {
+	
+}
+
+/* others */
+code{
+	font-family:"Courier New", Courier, mono;
+	font-size:11px;
+	padding:10px 10px 10px 50px;
+	border:1px solid #ddd;
+	margin:10px 0;
+	display:block;
+	text-indent:0;
+}
+
+table {
+	border-collapse:collapse; 
+	margin:0 0 10px 0; 
+}
+
+th, td {
+	border:1px solid #CCC; padding:10px;
+}
+
+th {
+	font-weight:bold;
+	text-align:center;
+}
+
+caption {
+	margin:0 0 10px 0;
+	text-align:center;
+}

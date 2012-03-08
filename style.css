@@ -1,0 +1,20 @@
+/*
+Theme Name:   Tomato WordPress Frame
+Theme URI:    http://yoursite.domain
+Description:  适合快速将demo转换为WP主题的空白框架，适用于中文站点，来自 <a href="http://guoyu.me">GuoYu</a> | a blank wordpress frame reset for chinese by <a href="http://guoyu.me">GuoYu</a>
+Version:      1.0
+Author:       GuoYu
+Author URI:   http://guoyu.me
+*/
+
+@charset: "utf-8";
+@import url(./css/reset.css);
+@import url(./css/grid.css);
+@import url(./css/base.css);
+@import url(./css/wp.css);
+
+/* CSS3.css if required */
+/*@import url(./css/css3.css);*/
+
+/* animate.css if required */
+/*@import url(./css/animate.css);*/

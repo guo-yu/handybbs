@@ -1,0 +1,23 @@
+/* CSS3 */
+@import "animate.css";
+
+/* text-shadow */
+.ts1d {text-shadow:1px 1px 1px #ddd;-webkit-text-shadow:1px 1px 1px #ddd;-moz-text-shadow:1px 1px 1px #ddd;-o-text-shadow:1px 1px 1px #ddd;}
+.ts10 {text-shadow:1px 1px 1px #000;-webkit-text-shadow:1px 1px 1px #000;-moz-text-shadow:1px 1px 1px #000;-o-text-shadow:1px 1px 1px #000;}
+.ts1f {text-shadow:1px 1px 1px #fff;-webkit-text-shadow:1px 1px 1px #fff;-moz-text-shadow:1px 1px 1px #fff;-o-text-shadow:1px 1px 1px #fff;}
+
+/* radius */
+.radius5{
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	-o-border-radius:5px;
+}
+
+/* transition */
+*:link, *:visited, *:hover, *:active, *:focus { 
+	-webkit-transition: color .25s linear, background-color .25s linear, border-color .25s linear;
+	-moz-transition: color .25s linear, background-color .25s linear, border-color .25s linear;
+	-o-transition: color .25s linear, background-color .25s linear, border-color .25s linear;
+	transition: color .25s linear, background-color .25s linear, border-color .25s linear;
+} 
