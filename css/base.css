@@ -2,13 +2,14 @@
 
 /* basic */
 body {
-	
+	color: #000;
+	background-color: #fff;
 }
 a {
-	
+	color: #A32128;
 }
 a:hover {
-	
+	text-decoration: underline;
 }
 a:active {
 	
@@ -22,39 +23,111 @@ a:visited {
 	
 }
 #ihd {
-	
+	padding: 0px 0 10px;
 }
 #logo {
 	
 }
 #logo h1 {
-	
+	font-size: 34px;
+	font-weight: normal;
+	text-align: center;
+	border-top: 8px solid #efefef; 
+	padding: 40px 0px 20px 0px;
 }
 #logo h1 a {
-	
+	background:url(../images/logo100.png) no-repeat left center;
+	padding: 30px 10px 30px 120px;
+	font-family:'Voces', sans-serif;
+	text-decoration: none;
+	color: #A32128;
+	text-shadow: 1px 1px 1px #ddd;
 }
-
+#logo h1 a:hover {
+	color: #999;
+}
 /* Nav Menu*/
 #nav {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+#inav {
 	
 }
-.menu {
-	
+.main-menu {
+	background-color: #fff;
 }
-.menu ul {
-	
+.main-menu ul:before, .main-menu ul:after{
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
 }
-.menu li {
-	
+.main-menu ul:after {
+	clear: both;
 }
-.menu li a {
-	
+.main-menu li {
+	float: left;
+	margin-right: 15px;
+	font-size: 14px;
+	position: relative;
 }
-.menu li a:hover {
-	
+.main-menu li a {
+	display: block;
+	padding: 5px 10px;
+	border-bottom: 3px solid #fff;
+}
+.main-menu li a:hover {
+	border-bottom: 3px solid #ddd;
+	text-decoration: none;
+}
+.current-menu-item a {
+	border-bottom: 3px solid #ddd !important;
 }
 .menu-cur a {
 	
+}
+.sub-menu {
+	display: none;
+	position: absolute;
+	width: 160px;
+	overflow: hidden;
+	background-color: #f5f5f5;
+	z-index: 99;
+	top: 30px;
+	left: 0;
+	border-top: 0;
+	box-shadow: 1px 1px 1px #ddd;
+	padding-top: 6px;
+}
+.sub-menu li {
+	float: none;
+}
+.sub-menu li a {
+	border:0 !important;
+	color: #999;
+	display: block;
+	font-size: 12px;
+	padding: 5px 10px;
+}
+.sub-menu li a:hover {
+	text-decoration: underline;
+}
+.sub-parent-cur {
+	background-color: #f5f5f5;
+	border-bottom: 0;
+	box-shadow: 1px 1px 1px #ddd;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.sub-parent a:hover {
+	border: 0 !important;
 }
 
 /* Banner */
@@ -76,6 +149,7 @@ a:visited {
 .bn-btn {
 	
 }
+
 /* Content */
 #cnt {
 	
@@ -86,24 +160,63 @@ a:visited {
 .post {
 	
 }
+.article {
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+}
+.article-title {
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 3px;
+	line-height: 1.5;
+}
+.page-title {
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: normal;
+}
+.byline {
+	color: #999;
+	margin-bottom: 15px;
+}
+.byline a {
+	color: #999;
+}
+.archive-title {
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	padding-bottom: 12px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+}
+.tag-list {
+	color: #999;
+}
+.tag-list a {
+	color: #999;
+}
+.single-pager {
+	padding: 10px 0;
+	margin: 10px 0;
+	border-top: 1px solid #ddd;
+}
+.previous {
+	margin-right:10px ;
+}
 /* Post Entry */
-.entry h1 {
-	
+.entry h1,.entry h2,.entry h3,.entry h4,.entry h5,.entry h6 {
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	padding-left: 6px;
+	border-left: 8px solid #ddd;
+	line-height: 1.0;
 }
-.entry h2 {
-	
-}
-.entry h3 {
-	
-}
-.entry h4 {
-	
-}
-.entry h5 {
-	
-}
-.entry h6 {
-	
+.entry img {
+	padding: 3px;
+	border: 1px solid #ddd;
 }
 .entry p {
 	
@@ -123,10 +236,19 @@ a:visited {
 	
 }
 .sdb-cnt {
-	
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+	color: #999;
 }
-.sdb-cnt h3 {
-	
+.sdb-cnt ul {
+	margin-left: 10px;
+}
+.sbd-title {
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 8px;
+	color: #000;
 }
 .sdb-menu {
 	
@@ -146,7 +268,10 @@ a:visited {
 	
 }
 .copyright {
-	
+	color: #999;
+}
+.copyright a {
+	color: #999;
 }
 
 /* others */
@@ -159,7 +284,16 @@ code{
 	display:block;
 	text-indent:0;
 }
-
+blockquote {
+	padding: 8px 13px;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+blockquote p {
+	margin: 4px 0;
+	line-height: 1.8;
+}
 table {
 	border-collapse:collapse; 
 	margin:0 0 10px 0; 

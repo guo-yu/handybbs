@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="post grid_8">
+<div class="post grid_9">
 	
 <?php if (have_posts()) : ?>
 
@@ -11,11 +11,11 @@
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="阅读全文 <?php the_title(); ?>" ><?php the_title(); ?></a>
 			</h3>
 	        <div class="byline clearfix">
-	            <span class="time"><?php the_date('','','') ?></span>
-	            <span class="cat"><?php the_category(', ') ?></span>
+	            <span class="time"><?php the_date('','','') ?></span> |
+	            <span class="cat"><?php the_category(', ') ?></span> |
 	            <span class="topcom"><?php comments_popup_link('暂无讨论', '1 评论', '% 评论'); ?></span>
 	        </div>
-        	<div class="entry">
+        	<div class="entry post-reset">
 				<!--<p class="article-info">
 					<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 260,"..."); ?><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">(阅读全文)</a>
 				</p>-->
@@ -28,7 +28,7 @@
 <?php else : ?>
 	
 		<div class="article">
-			<h3>暂无内容</h3>
+			<h3 class="no-entry">暂无内容</h3>
 		</div><!-- end article -->
 	
 <?php endif; ?>

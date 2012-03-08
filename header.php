@@ -45,7 +45,7 @@
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.6.2.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
 <?php wp_head(); ?>
@@ -54,13 +54,17 @@
 <div id="wrap">
 	<div id="hd">
 		<div id="ihd" class="container_12 clearfix">
-			<div id="logo">
+			<div id="logo" class="grid_12">
 				<h1><a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
 			</div>
 		</div>
 	</div>
 	<div id="nav">
-		<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+		<div id="inav" class="container_12 clearfix">
+			<div class="main-menu grid_12">
+				<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+			</div>
+		</div>
 	</div>		
 	<div id="cnt">
 		<div id="icnt" class="container_12 clearfix">

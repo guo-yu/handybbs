@@ -1,4 +1,4 @@
-<div id="sidebar" class="grid_4">
+<div id="sidebar" class="grid_3">
 	<div id="isidebar">			
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?> 
 		<h4 class="sidebar-title">目录</h4> 
