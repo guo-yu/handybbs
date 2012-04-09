@@ -1,7 +1,15 @@
 <?php
 // signup menus
 register_nav_menus(array('primary' => '顶部导航'));
-// register_nav_menus(array('menuname' => 'menudescription));
+// add thumbnails
+//if ( function_exists( 'add_theme_support' ) ) {
+//	add_theme_support( 'post-thumbnails' );
+//	set_post_thumbnail_size( 83, 9999 );
+//};
+//if ( function_exists( 'add_image_size' ) ) { 
+//	add_image_size( 'home-img', 81, 9999 );
+//	add_image_size( 'single-img', 250, 9999 );
+//};
 // signup sidebar
 if( function_exists('register_sidebar') ) {
 	register_sidebar(array(
