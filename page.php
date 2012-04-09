@@ -24,10 +24,6 @@
 	
 <?php endif; ?>
 
-		<div class="single-pager clearfix">
-			<div class="previous"><?php previous_post_link('%link') ?></div>
-			<div class="next"><?php next_post_link('%link') ?> </div>
-		</div>
 	</div><!-- end post -->
 	
 <?php get_sidebar(); ?>

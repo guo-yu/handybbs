@@ -84,7 +84,7 @@ text-decoration: underline;
 /* KISSY CSS Reset for post */
 
 .post-reset {
-    font: 12px/1.8 verdana, tahoma, arial, "STXihei", simsun,sans-serif;
+    font: 12px/1.8 verdana, "STXihei","Microsoft YaHei", tahoma, arial,  simsun,sans-serif;
 }
 .post-reset blockquote, .post-reset ul, .post-reset ol, .post-reset dl {
 	margin: 1em;

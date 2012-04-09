@@ -55,7 +55,7 @@
 	<div id="hd">
 		<div id="ihd" class="container_12 clearfix">
 			<div id="logo" class="grid_12">
-				<h1><a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+				<h1><a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a><span class="desc"><?php bloginfo('description'); ?></span></h1>
 			</div>
 		</div>
 	</div>

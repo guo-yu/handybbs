@@ -33,7 +33,7 @@
 
 	<!-- Comment Form -->
 	
-	<div class="comment-wrap">
+	<div class="post">
 	
 		<?php if ('open' == $post-> comment_status) : ?>
 		
@@ -44,7 +44,7 @@
 			<?php else : ?>
 	
 				<h3 id="comments" class="comments_headers"><?php comments_number('暂时没人参加讨论', '1 位同学发表了观点', '% 位同学发表了观点' );?>，说点什么吧：</h3>
-				<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="comment-form" class="clearfix">
+				<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="comment_form" class="clearfix">
 				
 				<?php if ( $user_ID ) { ?>
 		
@@ -52,20 +52,20 @@
 		
 				<?php } ?>
 				<?php if ( !$user_ID ) { ?>
-				<div class="meta-area">
-					<div class="meta-block"><input class="form-text meta-author" type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" /><label for="author">昵称</label></div>
-					<div class="meta-block"><input class="form-text meta-mail" type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" /><label for="email">电邮</label></div>
-					<div class="meta-block"><input class="form-text meta-site" type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" /><label for="url">个站</label></div>
+				<div class="metaarea fl">
+					<p><input class="text_input meta-author" type="text" name="author" id="author" value="<?php echo $comment_author; ?>" tabindex="1" /><label for="author">昵称</label></p>
+					<p><input class="text_input meta-mail" type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" tabindex="2" /><label for="email">电邮</label></p>
+					<p><input class="text_input meta-site" type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" tabindex="3" /><label for="url">个站</label></p>
 				</div>
 				<?php } ?>
 					<!--<p><small><strong>XHTML:</strong> You can use these tags: <?php echo allowed_tags(); ?></small></p>-->
 				
-					<textarea class="form-text-area" name="commentArea" id="commentArea" cols="7" rows="7" tabindex="4"></textarea>
+					<textarea class="text_input text_area fl" name="comment" id="comment" cols="7" rows="7" tabindex="4"></textarea>
 				
 					<?php if (function_exists('show_subscription_checkbox')) { show_subscription_checkbox(); } ?>
 				
-					<div class="submit-btn">
-						<input name="submit" class="form-submit" type="submit" id="submit" tabindex="5" value="写好了" />
+					<div class="submit-btn fl">
+						<input name="submit" class="form_submit" type="submit" id="submit" tabindex="5" value="写好了，贴上去" />
 						<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 					</div>
 			
@@ -81,9 +81,9 @@
 
 		<?php $count_pings = 1; foreach ($comments as $comment) { ?>
 	
-        <div class="comment-text clearfix">
+        <div class="comment_text clearfix">
 				<?php echo get_avatar( $comment, 50 ); ?>
-				<p class="comment-meta"><?php comment_author_link() ?> 在 <?php comment_date() ?> 说：</p>
+				<p class="comment_meta"><?php comment_author_link() ?> 在 <?php comment_date() ?> 说：</p>
 				<?php comment_text() ?> 
 				<?php if ($comment->comment_approved == '0') : ?>
 				<p>由于某些原因，您的评论正等待审核。</p>
@@ -96,7 +96,7 @@
 		<?php if ('open' == $post-> comment_status) { ?> 
 		<!-- If comments are open, but there are no comments. -->
 		
-		<p class="noreply">沙发空着，敬候佳音。</p>
+		<p class="noonereply">沙发空着，敬候佳音。</p>
 
 		<?php } else { // comments are closed ?>
 
