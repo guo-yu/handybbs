@@ -246,12 +246,12 @@ a:visited {
 		.comments_headers {
 			font-size:14px !important;
 			font-weight:normal;
-			padding:8px 0 8px 20px !important;
-			margin:10px 0 10px;
-			border-top:1px dotted #ddd;
-			background-color:#efefef;
-			border-bottom:1px dotted #ddd;
+			margin:30px 0 10px;
+			padding-left: 10px;
+			border-left: 6px solid #A32128;
+			line-height: 1.0;
 			clear:both;
+			color: #A32128;
 		}
 		.comment_text {
 			padding-left:20px;
