@@ -1,0 +1,20 @@
+﻿@charset "utf-8"; 
+
+/* 
+@frameName：Tomato Product-Demo Frame
+@brief：良好的中文字体兼容性，用以快速搭建产品demo，创建高保真交互原型。
+@author：GuoYu
+@URI: http://guoyu.me
+@ver：2.3
+*/
+
+@import url('./reset.css');
+/* choose your grid system */
+	@import url('./960.css');
+	/* @import url('./grid/1140.css'); */
+/* icon font by twitter */
+	@import url('./font-awesome.css'); 
+/* your main style here */
+	@import url('./base.css'); 
+/* if your demo will be a WordPress theme. import wp.css */
+	/* @import url('./wp.css'); */ 

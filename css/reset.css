@@ -58,7 +58,7 @@ vertical-align:text-bottom;
 /* 重置文本格式元素 */
 
 body,button, input, select, textarea /* for ie */ {
-font:12px/1.5 tahoma, Verdana, Arial, Helvetica, "STXihei", simsun, sans-serif;
+font:12px/1.5 tahoma, Verdana, Arial, Helvetica, "STXihei", "Microsoft YaHei", simsun, sans-serif;
 }
 
 address, cite, dfn, em, var { 
@@ -84,7 +84,7 @@ text-decoration: underline;
 /* KISSY CSS Reset for post */
 
 .post-reset {
-    font: 12px/1.8 verdana, "STXihei","Microsoft YaHei", tahoma, arial,  simsun,sans-serif;
+    font: 14px/1.8 verdana, "STXihei","Microsoft YaHei", tahoma, arial,  simsun,sans-serif;
 }
 .post-reset blockquote, .post-reset ul, .post-reset ol, .post-reset dl {
 	margin: 1em;

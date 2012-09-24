@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
-<div class="post grid_9">
+<div class="main-board board index-board grid_12">
 	
 <?php if (have_posts()) : ?>
 
+	<div class="archive-bread clearfix">
  	  <?php /* If this is a category archive */ if (is_category()) { ?>
-		<h2 class="archive-title"><?php single_cat_title(); ?> 下的所有文章</h2>
-		<p class="archive-cat-des"><?php echo category_description(); ?></p>
+		<h2 class="archive-title"><a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a><i class="icon-chevron-right"></i><?php single_cat_title(); ?> <span class='cat-desc'><?php echo category_description(); ?></span></h2>
+		<div class="archive-cat-des"></div>
  	  <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
 		<h2 class="archive-title">标签为 <?php single_tag_title(); ?> 的所有文章</h2>
 		<div class="archive-tag-des"><?php echo tag_description(); ?></div>
@@ -21,24 +22,29 @@
  	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 		<h2 class="archive-title">博客存档</h2>
  	  <?php } ?>
+ 	  
+ 	  <?php if ( is_user_logged_in() ) { ?>
+  		<div class="push-new-post">
+  			<a href="<?php echo get_settings('home'); ?>/wp-admin/post-new.php" class="#">发布新帖</a>
+  		</div>
+ 	  <?php } ?>
+ 	  
+ 	</div>
 
 <?php while (have_posts()) : the_post(); ?>
 
-		<div class="article">
-			<h3 class="article-title">
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="阅读全文 <?php the_title(); ?>" ><?php the_title(); ?></a>
-			</h3>
-		    <div class="byline clearfix">
-		        <span class="time"><?php the_date('','','') ?></span>
-		        <span class="cat"><?php the_category(', ') ?></span>
-		        <span class="topcom"><?php comments_popup_link('暂无讨论', '1 评论', '% 评论'); ?></span>
-		    </div>
-			<div class="entry">
-				<p class="article-info">
-					<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 260,"..."); ?><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">(阅读全文)</a>
-				</p>
+		<section class="pub-main lz-board">
+			<div class="single-pub clearfix">	
+				<div class="avatar">
+					<?php echo get_avatar(get_the_author_id(), 50 ); ?>
+				</div>
+				<h4 class="title">
+					<a href="<?php the_permalink() ?>" rel="bookmark" title="阅读全文 <?php the_title(); ?>" ><?php the_title(); ?></a>
+				</h4>
+				<div class="author"><span class="name"><?php the_author_link(); ?></span><span class="cat"><i class="icon-chevron-right"></i><?php the_category(', ') ?></span></span> <i class="icon-time"></i> <?php echo get_the_date() ?></div>
 			</div>
-		</div>
+			<div class="board-meta clearfix"><span class="views"><i class="icon-eye-open"></i><?php if(function_exists('the_views')) { the_views(); } ?></span><span class="num"><i class="icon-comment"></i><?php comments_popup_link('0', '1', '% '); ?></span></div>
+		</section>
 		
 <?php endwhile; ?>
 								
@@ -50,18 +56,15 @@
 	
 <?php endif; ?>
 
-	<div class="postnoline clearfix">
+	<div class="pager clearfix">
 		<?php if(function_exists('wp_page_numbers')) : ?>
-		<?php wp_page_numbers(); ?>
+			<?php wp_page_numbers(); ?>
 		<?php else : ?>
 		<span class="previous"><?php next_posts_link('&larr; 前几篇') ?></span>
 		<span class="next"><?php previous_posts_link('后几篇 &rarr;') ?></span>
 		<?php endif; ?>
 	</div>
 	
-	</div><!-- end post -->
-	<?php get_sidebar(); ?>
+</div><!-- end .main-board -->
 	
-</div><!-- end entry -->
-
 <?php get_footer(); ?>

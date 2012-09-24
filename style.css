@@ -1,22 +1,15 @@
 /*
-Theme Name:   Tomato WordPress Frame
-Theme URI:    http://yoursite.domain
-Description:  番茄包空白wordpress框架适合快速将demo转换为WP主题的空白框架，适用于中文站点，具备wp基础结构和样式，部分样式文件来自集成960gs和kissy reset的<a href="https://github.com/turingou/Tomato-frame" target='"_blank"> tomato xhtml frame </a>，这款空白框架也停靠在<a href="https://github.com/turingou/Tomato-WordPress-Frame" target='"_blank">Github</a>，作者为 <a href="http://guoyu.me" target='"_blank">郭宇</a> | a blank wordpress frame reset for chinese by <a href="http://guoyu.me" target='"_blank">GuoYu</a>
+Theme Name:   handybbs
+Theme URI:    http://handybbs.com
+Description:  handybbs
 Version:      1.0
 Author:       Guo Yu
 Author URI:   http://guoyu.me
-Tags: blank frame, blank theme, naked theme,two-column,fixed width, chinese theme,white,clean,left-sidebar, right-sidebar,custom-menu
 */
 
 @charset: "utf-8";
 @import url(./css/reset.css);
-@import url(./css/grid.css);
+@import url(./css/960.css);
+@import url(./css/font-awesome.css);
 @import url(./css/base.css);
-@import url(./css/wp.css);
-@import url(http://fonts.googleapis.com/css?family=Voces);
-
-/* CSS3.css if required */
-/*@import url(./css/css3.css);*/
-
-/* animate.css if required */
-/*@import url(./css/animate.css);*/
+@import url(./css/wp.css); 
