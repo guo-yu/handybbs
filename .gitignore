@@ -1,3 +1,5 @@
 *.esproj
 thumb
 psd
+*.sublime-*
+.DS_Store
